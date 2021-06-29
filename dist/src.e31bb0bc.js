@@ -2357,17 +2357,36 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme'
-}; // По умолчанию тема светлая.
-// При изменении темы, необходимо добавлять на элемент body 
-// класс light - theme или dark - theme.
-// Выбранная тема должна сохраняться между перезагрузками 
-// страницы.Для хранения темы используй localStorage.
-// Если при загрузке страницы тема тёмная, не забудь 
-// поставить свойство checked у чекбокса #theme -switch-toggle в true,
-// чтобы ползунок сдвинулся в правильное положение.
-
+};
+var refs = {
+  bodyEl: document.querySelector('body'),
+  themeChange: document.querySelector('#theme-switch-toggle')
+};
 var menuContainer = document.querySelector('.js-menu');
 menuContainer.insertAdjacentHTML('beforeend', (0, _menuTmpl.default)(_menu.default));
+refs.themeChange.addEventListener('change', onCheckboxClick);
+actualTheme();
+
+function onCheckboxClick(evt) {
+  var themeCheked = evt.target.checked;
+  themeSwitch(themeCheked);
+  localStorage.setItem('theme-id', themeCheked);
+}
+
+function themeSwitch(check) {
+  if (check) refs.bodyEl.classList.add("".concat(Theme.DARK));else {
+    refs.bodyEl.classList.add("".concat(Theme.LIGHT)), refs.bodyEl.classList.remove("".concat(Theme.DARK));
+  }
+}
+
+function actualTheme() {
+  var checker = localStorage.getItem('theme-id');
+
+  if (checker === 'true') {
+    refs.themeChange.checked = true;
+    refs.bodyEl.classList.add("".concat(Theme.DARK));
+  }
+}
 },{"../menu.json":"../menu.json","../templates/menuTmpl.hbs":"../templates/menuTmpl.hbs"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -2396,7 +2415,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57000" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57321" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
