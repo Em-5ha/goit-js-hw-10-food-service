@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10-food-service/" 
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
   },
-  "homepage": "https://github.com/Em-5ha/goit-js-hw-10-food-service#readme",
+  "homepage": "https://Em-5ha/github.io/goit-js-hw-10-food-service",
   "dependencies": {
     "parcel-plugin-handlebars-precompile": "^1.0.2"
   },
