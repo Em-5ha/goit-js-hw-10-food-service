@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../menu.json":[function(require,module,exports) {
+})({"menu.json":[function(require,module,exports) {
 module.exports = [{
   "id": "XWaQXcbk0",
   "name": "Картофель, запеченный в мундире",
@@ -175,7 +175,7 @@ module.exports = [{
   "price": 240,
   "ingredients": ["Круглый рис", "Мини цукини", "Тертый имбирь", "Грибы шиитаке", "Соевый соус", "Кунжутное масло"]
 }];
-},{}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
+},{}],"node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**!
@@ -2190,7 +2190,7 @@ THE SOFTWARE.
 });
 
 ;
-},{}],"../templates/menuTmpl.hbs":[function(require,module,exports) {
+},{}],"templates/menuTmpl.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2345,7 +2345,7 @@ var templateFunction = _handlebars.default.template({
 
 var _default = templateFunction;
 exports.default = _default;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"index.js":[function(require,module,exports) {
+},{"handlebars/dist/handlebars.runtime":"node_modules/handlebars/dist/handlebars.runtime.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _menu = _interopRequireDefault(require("../menu.json"));
@@ -2387,7 +2387,7 @@ function actualTheme() {
     refs.bodyEl.classList.add("".concat(Theme.DARK));
   }
 }
-},{"../menu.json":"../menu.json","../templates/menuTmpl.hbs":"../templates/menuTmpl.hbs"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../menu.json":"menu.json","../templates/menuTmpl.hbs":"templates/menuTmpl.hbs"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2415,7 +2415,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61233" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49739" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2591,5 +2591,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
+//# sourceMappingURL=/src.a2b27638.js.map
