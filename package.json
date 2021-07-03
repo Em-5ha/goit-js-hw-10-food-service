@@ -18,7 +18,7 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
   },
-  "homepage": "https://Em-5ha/github.io/goit-js-hw-10-food-service",
+  "homepage": "https://Em-5ha.github.io/goit-js-hw-10-food-service",
   "dependencies": {
     "parcel-plugin-handlebars-precompile": "^1.0.2"
   },
